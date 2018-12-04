@@ -1,2 +1,1 @@
-# WEKU_COMMUNITY
-weku-community by nirob 
+# test-vote-bot
