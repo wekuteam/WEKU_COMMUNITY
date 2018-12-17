@@ -11,19 +11,17 @@ module.exports = class ConfigValuePostFormatter {
      * @param {string} name  Name of config parameter.
      * @param {*}      value New value for config parameter.
      *
-     * @return {*|undefined} Working value of config parameter or undefined for non supported values
+     * @return {*} Working value of config parameter.
      */
     static run(name, value) {
         switch (name) {
-            case ConfigParameter.WEIGHT:
-                return value;
             case ConfigParameter.MIN_POST_AGE:
             case ConfigParameter.MAX_POST_AGE:
                 const parsedDate = chrono.parseDate(value);
 
                 return moment(parsedDate).fromNow();
             default:
-                return undefined;
+                return value;
         }
     }
 };
