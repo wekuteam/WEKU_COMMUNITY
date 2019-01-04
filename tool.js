@@ -1,12 +1,6 @@
 'use strict';
+ 
 
-function isArrayContainsProperty(objects, propertyName, propertyValue) {
-    let result = false;
-    for (let i in objects) {
-        if (objects[i][propertyName] === propertyValue) {
-            result = true;
-            break;
-        }
     }
 
     return result;
